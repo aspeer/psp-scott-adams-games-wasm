@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "psp-scott-adams-games-wasm",
+  "main": ".webdyne/worker.js",
+  "compatibility_date": "2026-09-04",
+  "compatibility_flags": ["enable_request_signal"],
+  "workers_dev": true,
+  "observability": {
+    "enabled": true,
+    "traces": {"enabled": true, "head_sampling_rate": 0.1}
+  },
+  "vars": {"WEBDYNE_ROOT": "/app", "WEBDYNE_INDEX": "app.psp", "WEBDYNE_STATIC": "0"},
+  "rules": [
+    {"type": "Text", "globs": ["**/*.pl", "**/*.pm"], "fallthrough": false},
+    {"type": "Data", "globs": ["**/*.tar.gz"], "fallthrough": false}
+  ]
+}

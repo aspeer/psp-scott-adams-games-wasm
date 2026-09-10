@@ -1,0 +1,28 @@
+<start_html title="Scott Adams &middot; Adventure Terminal"
+  style="@{qw(terminal-xterm.css adventure.css?v=0.1.0)}"
+  require="adventure" ws="adventure::ws">
+
+<main class="adventure-shell">
+  <header class="masthead">
+    <div><p class="eyebrow">THE ORIGINAL TEXT ADVENTURES</p>
+      <h1>Scott Adams<span class="title-dot">.</span></h1></div>
+    <div class="connection"><span class="connection-dot"></span>
+      <button id="connection-status" type="button" data-state="connecting">Connecting</button></div>
+  </header>
+  <section class="console" aria-label="Adventure console">
+    <div class="console-bar"><span class="console-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>ADVENTURE TERMINAL</span><span id="turn-count">READY PLAYER ONE</span></div>
+    <section class="scene" aria-label="Current location">
+      <div class="scene-label"><span>YOUR WORLD</span><span id="scene-index">LIBRARY / 16 ADVENTURES</span></div>
+      <h2 id="game-title">Choose your adventure</h2>
+      <pre id="room">Opening the adventure library...</pre>
+    </section>
+    <div class="transcript-label"><span>COMMAND LINE</span><span>TYPE /HELP FOR CONTROLS</span></div>
+    <div id="terminal" aria-label="Game selection and command terminal"></div>
+  </section>
+  <footer><span><b>Two words.</b> A whole other world.</span>
+    <span>Games &copy; Scott Adams &middot; <a href="games/readme_sa.txt">Original notice</a></span></footer>
+</main>
+<script src="terminal-xterm.js"></script>
+<script src="terminal-addon-fit.js"></script>
+<script src="adventure.js?v=0.1.0"></script>

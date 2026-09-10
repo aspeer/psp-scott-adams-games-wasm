@@ -1,0 +1,6 @@
+*.psp
+*.pm
+*.pl
+*.conf
+*.md
+/games/*.dat

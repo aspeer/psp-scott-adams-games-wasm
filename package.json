@@ -1,0 +1,18 @@
+{
+  "name": "psp-scott-adams-games-wasm",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Scott Adams adventures over WebDyne::PAGI WebSockets",
+  "scripts": {
+    "start": "webdyne.pagi --host 127.0.0.1 --port 3000 --index=app.psp app",
+    "test": "prove -Iapp t",
+    "test:socket": "node scripts/test-socket.mjs",
+    "build": "webdyne-cloudflare build",
+    "check": "webdyne-cloudflare check",
+    "dev": "webdyne-cloudflare dev",
+    "deploy": "webdyne-cloudflare deploy",
+    "whoami": "webdyne-cloudflare whoami"
+  },
+  "dependencies": {"@webdyne/webdyne-zeroperl": "1.0.6"},
+  "webdyne": {"appDirectory": "app", "entry": "app.psp", "static": false, "outputDirectory": ".webdyne"}
+}

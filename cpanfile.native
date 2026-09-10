@@ -1,0 +1,4 @@
+requires 'WebDyne::PAGI';
+requires 'PAGI::Server';
+requires 'PAGI::Tools';
+requires 'Future::AsyncAwait';
