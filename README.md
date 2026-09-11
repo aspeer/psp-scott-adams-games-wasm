@@ -89,7 +89,6 @@ The other adventures are smoke-tested, not verified with complete walkthroughs.
 - `app/adventure.js` and `app/adventure.css`: xterm interface and scene panel.
 - `app/games/`: bundled game databases and original copyright notice.
 - `t/` and `scripts/test-socket.mjs`: engine and transport tests.
-- `WEBDYNE.md`: runtime observations and small app-level workarounds.
 
 All required game files were copied into this repository. The original
 `scott-adams-games` and `psp-WebDyne-ws-Terminal-WASM` repositories are references;
@@ -102,10 +101,12 @@ under the same terms as Perl 5, itself based on ScottFree 1.14 from Swansea
 University Computer Society (1993–1995), distributed under GPLv2. Original
 notices and database-format documentation are preserved in `docs/upstream/`.
 
+The original Github repo the games were sourced from is
+<https://github.com/Ovid/scott-adams-games.git>
+
 The games remain copyright Scott Adams; they are not public domain. Their
 original notice is `app/games/readme_sa.txt`; the source distribution's bundling
 permission statement is preserved in `docs/upstream/README-perl.md`.
 
-The xterm.js assets were copied from the supplied terminal demo. The upstream
 MIT notice is included in each asset and in `docs/upstream/LICENSE-xterm.txt`.
 The ZeroPerl package carries its own third-party notices.
