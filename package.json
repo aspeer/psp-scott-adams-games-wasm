@@ -13,6 +13,13 @@
     "deploy": "webdyne-cloudflare deploy",
     "whoami": "webdyne-cloudflare whoami"
   },
-  "dependencies": {"@webdyne/webdyne-zeroperl": "1.0.6"},
-  "webdyne": {"appDirectory": "app", "entry": "app.psp", "static": false, "outputDirectory": ".webdyne"}
+  "dependencies": {
+    "@webdyne/webdyne-zeroperl": "1.0.15"
+  },
+  "webdyne": {
+    "appDirectory": "app",
+    "entry": "app.psp",
+    "static": false,
+    "outputDirectory": ".webdyne"
+  }
 }

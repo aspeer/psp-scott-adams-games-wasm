@@ -40,11 +40,14 @@ async function connect() {
 try {
   const response = await fetch(base);
   assert.equal(response.status, 200);
-  const html = await response.text();
+  const html = new TextDecoder('utf-8', {fatal: true}).decode(await response.arrayBuffer());
   assert.match(html, /Adventure Terminal/);
   assert.doesNotMatch(html, /Â|â€|\$\{/, 'HTML encoding and substitutions are clean');
   for (const asset of ['adventure.js', 'adventure.css', 'terminal-xterm.js', 'games/readme_sa.txt']) {
     assert.equal((await fetch(new URL(asset, base))).status, 200, `asset ${asset}`);
+  }
+  for (const privatePath of ['ScottGame.pm', 'adventure.pm', 'adventure.pm.md', 'games/adventureland.dat']) {
+    assert.equal((await fetch(new URL(privatePath, base))).status, 404, `private file ${privatePath}`);
   }
   const [one, two] = await Promise.all([connect(), connect()]);
   assert.equal((await one.command('../ScottGame.pm')).type, 'info', 'selection is allowlisted');

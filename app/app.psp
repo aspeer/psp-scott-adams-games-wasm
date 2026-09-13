@@ -1,4 +1,4 @@
-<start_html title="Scott Adams &middot; Adventure Terminal"
+<start_html title="Scott Adams - Adventure Terminal"
   style="@{qw(terminal-xterm.css adventure.css?v=0.1.0)}"
   require="adventure" ws="adventure::ws">
 

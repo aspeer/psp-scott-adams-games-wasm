@@ -23,13 +23,15 @@ The native server binds only to loopback; the public demo is the Worker deployme
 
 ## ZeroPerl / Cloudflare
 
+The runtime is pinned to npm `@webdyne/webdyne-zeroperl@1.0.15` (WebDyne 3.029, Perl 5.44.0), with its bundled Wrangler 4.131.1. No sibling checkout or local package link is used.
+
 Node 22 or newer is needed for the integration test's built-in WebSocket client.
 Install the locked dependencies and run the Worker locally:
 
 ```sh
 npm ci
 npm run check
-npm run dev -- -- --port 8787
+npm run dev -- -- --local --port 8787
 ```
 
 Open http://127.0.0.1:8787/. Restart `npm run dev` after changing server files
@@ -80,6 +82,8 @@ message validation, all 16 games, independent players, restart, disconnect/recon
 and a complete mini-adventure walkthrough scoring 100. Engine tests also check
 inventory, room changes, unknown commands, random events, and game-over handling.
 The other adventures are smoke-tested, not verified with complete walkthroughs.
+
+See [the npm upgrade review](docs/NPM-UPGRADE-REVIEW.md) for the 1.0.15 qualification and the UTF-8 title workaround.
 
 ## Source layout
 
