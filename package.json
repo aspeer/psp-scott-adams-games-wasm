@@ -2,6 +2,7 @@
   "name": "psp-scott-adams-games-wasm",
   "version": "0.1.0",
   "private": true,
+  "license": "SEE LICENSE IN LICENSE",
   "description": "Scott Adams adventures over WebDyne::PAGI WebSockets",
   "scripts": {
     "start": "webdyne.pagi --host 127.0.0.1 --port 3000 --index=app.psp app",

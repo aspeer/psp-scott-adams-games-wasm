@@ -1,0 +1,22 @@
+Licensing in this repository depends on the material concerned.
+
+The WebDyne application code and original interface code written for this
+repository are copyright (c) 2026 by Andrew Speer and may be redistributed
+and/or modified under the same terms as the Perl 5 programming language system
+itself: either the GNU General Public License or the Artistic License.
+
+The adapted Perl interpreter is derived from Curtis "Ovid" Poe's `scott.pl`,
+which is distributed under the same terms as Perl 5, and from ScottFree 1.14,
+which is distributed under version 2 of the GNU General Public License. The
+preserved upstream notices in `docs/upstream/` describe that lineage.
+
+The xterm.js-derived assets retain their MIT notices in the files themselves
+and in `docs/upstream/LICENSE-xterm.txt`.
+
+The bundled Scott Adams game databases are copyright Scott Adams and are not
+licensed under the terms above. Their original notice is preserved in
+`app/games/readme_sa.txt`; the upstream bundling statement is preserved in
+`docs/upstream/README-perl.md`.
+
+Nothing in this file grants additional rights to names, game databases, or
+other third-party material.
