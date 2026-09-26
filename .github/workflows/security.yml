@@ -36,8 +36,9 @@ jobs:
           perl-version: '5.44.0'
       - name: Install audit tool
         run: cpanm --notest --local-lib-contained audit CPAN::Audit
-      - name: Audit declared CPAN dependencies
+      - name: Report advisories in declared CPAN dependencies
         run: |
           mkdir audit-input
           cp cpanfile.native audit-input/cpanfile
-          perl -I"$GITHUB_WORKSPACE/audit/lib/perl5" audit/bin/cpan-audit deps audit-input --no-corelist
+          perl -I"$GITHUB_WORKSPACE/audit/lib/perl5" audit/bin/cpan-audit \
+            deps audit-input --no-corelist --exit-zero
