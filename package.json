@@ -15,7 +15,7 @@
     "whoami": "webdyne-cloudflare whoami"
   },
   "dependencies": {
-    "@webdyne/webdyne-zeroperl": "1.0.15"
+    "@webdyne/webdyne-zeroperl": "1.0.16"
   },
   "webdyne": {
     "appDirectory": "app",
